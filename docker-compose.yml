@@ -1,0 +1,31 @@
+version: "3.5"
+services:
+  hoshi:
+    container_name: hoshi
+    build: .
+    depends_on:
+      - hoshi_postgres
+    networks:
+      - hoshinet
+    env_file:
+      - .env
+    environment:
+      HOSHI_DATABASE_URL: "postgres://hoshi:docker@hoshi_postgres/hoshi"
+      HOSHI_SENTRY_KEY: "" # optional sentry key for error reporting
+      HOSHI_SELFSTAR_WARNING_TIMEOUT: 60000
+  hoshi_postgres:
+    container_name: hoshi_postgres
+    image: postgres
+    networks:
+      - hoshinet
+    volumes:
+      - hoshidata
+    environment:
+      POSTGRES_USER: hoshi
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: hoshi
+networks:
+  hoshinet:
+    name: hoshinet
+volumes:
+  hoshidata:
