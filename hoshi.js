@@ -2,7 +2,7 @@ require('./src/util/Extensions');
 
 const {
   HOSHI_TOKEN,
-  HOSHI_OWNER,
+  HOSHI_OWNERS,
   HOSHI_DATABASE_URL,
   HOSHI_SENTRY_KEY,
   HOSHI_SELFSTAR_WARNING_TIMEOUT
@@ -10,10 +10,10 @@ const {
 
 const config = {
   token: HOSHI_TOKEN,
-  owner: HOSHI_OWNER,
+  owner: JSON.parse(HOSHI_OWNERS),
   dbURL: HOSHI_DATABASE_URL,
   sentryKey: HOSHI_SENTRY_KEY,
-  selfstarWarningTimeout: HOSHI_SELFSTAR_WARNING_TIMEOUT
+  selfstarWarningTimeout: Number(HOSHI_SELFSTAR_WARNING_TIMEOUT)
 };
 
 const HoshiClient = require('./src/struct/HoshiClient');

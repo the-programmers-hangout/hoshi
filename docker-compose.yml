@@ -11,8 +11,6 @@ services:
       - .env
     environment:
       HOSHI_DATABASE_URL: "postgres://hoshi:docker@hoshi_postgres/hoshi"
-      HOSHI_SENTRY_KEY: "" # optional sentry key for error reporting
-      HOSHI_SELFSTAR_WARNING_TIMEOUT: 60000
   hoshi_postgres:
     container_name: hoshi_postgres
     image: postgres
