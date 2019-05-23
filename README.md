@@ -1,9 +1,9 @@
 # Hoshi
 
-A starboard bot written for Discord using Discord.js.  
+A starboard bot written for Discord using Discord.js.
 
 Made by [1Computer](https://github.com/1computer1) and [vzwGrey](https://github.com/vzwGrey).  
-Invite Link: [Click here!](https://discordapp.com/oauth2/authorize?permissions=93184&scope=bot&client_id=341715769035456515)  
+Invite Link: [Click here!](https://discordapp.com/oauth2/authorize?permissions=93184&scope=bot&client_id=341715769035456515)
 
 ## Features
 
@@ -20,6 +20,9 @@ Invite Link: [Click here!](https://discordapp.com/oauth2/authorize?permissions=9
 ## Setup
 
 To setup for personal use:
-- Set up a PostgreSQL database.
-- Fill out the `config.json`.
-- Run the bot using `node .` or [PM2](http://pm2.keymetrics.io/).
+
+1. Download [docker-compose](https://docs.docker.com/compose/install/)
+2. Copy `.env.config` file over to `.env` and fill out your info
+3. run: `docker-compose up`
+
+`docker-compose stop` to stop the bot at any time
