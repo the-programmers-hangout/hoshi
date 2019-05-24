@@ -61,8 +61,7 @@ class HelpCommand extends Command {
 			.addField('Command List',
 				[
 					'This is a list of commands.',
-					'To view details for a command, do `*help <command>`.',
-					'To view the guide which explains how to use Hoshi in depth, use `*guide`.'
+					'To view details for a command, do `*help <command>`.'
 				]);
 
 		for (const category of this.handler.categories.values()) {
